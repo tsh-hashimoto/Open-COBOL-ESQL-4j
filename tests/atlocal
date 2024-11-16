@@ -1,5 +1,5 @@
 COBC=cobj
-OCESQL=ocesql
+OCESQL4J=ocesql4j
 EMBED_DB_INFO="sh ../../embed_db_info.sh"
 COMPILE="${COBC} -I ../../"
 COMPILE_MODULE="${COMPILE}"

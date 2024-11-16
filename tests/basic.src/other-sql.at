@@ -118,7 +118,7 @@ AT_DATA([prog.cbl], [
 
 ])
 AT_CHECK([${EMBED_DB_INFO} prog.cbl])
-AT_CHECK([ocesql prog.cbl prog.cob], [0],
+AT_CHECK([${OCESQL4J} prog.cbl prog.cob], [0],
 [precompile start: prog.cbl
 =======================================================
               LIST OF CALLED DB Library API            @&t@
