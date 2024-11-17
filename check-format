@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ocesql && ./check-format
+cd ocesql4j && ./check-format
 cd ../dblibj && ./check-format
