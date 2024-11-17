@@ -89,7 +89,7 @@ jobs:
 
       # Make a coverage report
       - name: Make a coverage report
-        working-directory: ocesql
+        working-directory: ocesql4j
         run: |
           gcov -l ./*.gcda
           gcovr -r . --html -o report.html
@@ -101,4 +101,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
-          path: ocesql/coverage-report/
+          path: ocesql4j/coverage-report/
