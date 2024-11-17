@@ -27,7 +27,7 @@ jobs:
 
       # Check C files in ocesql/ using cppcheck 
       - name: Run cppcheck
-        working-directory: ocesql
+        working-directory: ocesql4j
         run: |
          ./cppcheck 
 
