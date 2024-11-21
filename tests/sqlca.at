@@ -1,4 +1,4 @@
-AT_INIT(SQLCA test)
+AT_INIT([SQLCA test])
 
 AT_TESTED([ocesql4j])
 

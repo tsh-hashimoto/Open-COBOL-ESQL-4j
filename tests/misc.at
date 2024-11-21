@@ -1,4 +1,4 @@
-AT_INIT(misc)
+AT_INIT([misc])
 
 AT_TESTED([ocesql4j])
 

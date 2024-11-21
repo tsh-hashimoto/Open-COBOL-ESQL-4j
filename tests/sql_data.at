@@ -1,4 +1,4 @@
-AT_INIT(sql data test)
+AT_INIT([sql data test])
 
 AT_TESTED([ocesql4j])
 

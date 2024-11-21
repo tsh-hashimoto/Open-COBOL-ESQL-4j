@@ -1,4 +1,4 @@
-AT_INIT(cobol data test)
+AT_INIT([cobol data test])
 
 AT_TESTED([ocesql4j])
 m4_include([numeric_signed_v.at])
