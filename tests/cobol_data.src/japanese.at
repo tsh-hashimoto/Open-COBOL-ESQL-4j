@@ -11,16 +11,16 @@ AT_DATA([prog.cbl], [
        01 V PIC N(5).
 
        01  TEST-DATA.
-         03 FILLER  PIC N(5) VALUE "‚ ‚¢‚¤‚¦‚¨".
-         03 FILLER  PIC N(5) VALUE "‚‚‚‚ƒ‚„‚…".
-         03 FILLER  PIC N(5) VALUE "‚P‚Q‚R‚S‚T".
-         03 FILLER  PIC N(5) VALUE "ƒvƒƒOƒ‰ƒ€".
-         03 FILLER  PIC N(5) VALUE "‚`‚a‚b‚c‚d".
-         03 FILLER  PIC N(5) VALUE "I”“•".
-         03 FILLER  PIC N(5) VALUE "“ú–{ŒêŠ¿Žš".
-         03 FILLER  PIC N(5) VALUE "—op–{".
-         03 FILLER  PIC N(5) VALUE "QH„ƒC".
-         03 FILLER  PIC N(5) VALUE "“ú–{„ƒC".
+         03 FILLER  PIC N(5) VALUE "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".
+         03 FILLER  PIC N(5) VALUE "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".
+         03 FILLER  PIC N(5) VALUE "ï¿½Pï¿½Qï¿½Rï¿½Sï¿½T".
+         03 FILLER  PIC N(5) VALUE "ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½".
+         03 FILLER  PIC N(5) VALUE "ï¿½`ï¿½aï¿½bï¿½cï¿½d".
+         03 FILLER  PIC N(5) VALUE "ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".
+         03 FILLER  PIC N(5) VALUE "ï¿½ï¿½ï¿½{ï¿½êŠ¿ï¿½ï¿½".
+         03 FILLER  PIC N(5) VALUE "ï¿½ï¿½ï¿½oï¿½pï¿½ï¿½ï¿½{".
+         03 FILLER  PIC N(5) VALUE "ï¿½Qï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½C".
+         03 FILLER  PIC N(5) VALUE "ï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½C".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -117,7 +117,7 @@ AT_DATA([prog.cbl], [
 ])
 
 AT_CHECK([${EMBED_DB_INFO} prog.cbl])
-AT_CHECK([ocesql prog.cbl prog.cob], [0],
+AT_CHECK([${OCESQL4J} prog.cbl prog.cob], [0],
 [precompile start: prog.cbl
 =======================================================
               LIST OF CALLED DB Library API            @&t@
@@ -133,16 +133,16 @@ Generate:OCESQLDisconnect
 ])
 AT_CHECK([${COMPILE_MODULE} prog.cob])
 AT_CHECK([${RUN_MODULE} prog], [0],
-[‚ ‚¢‚¤‚¦‚¨
-‚‚‚‚ƒ‚„‚…
-‚P‚Q‚R‚S‚T
-ƒvƒƒOƒ‰ƒ€
-‚`‚a‚b‚c‚d
-I”“•
-“ú–{ŒêŠ¿Žš
-—op–{
-QH„ƒC
-“ú–{„ƒC
+[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½Pï¿½Qï¿½Rï¿½Sï¿½T
+ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½
+ï¿½`ï¿½aï¿½bï¿½cï¿½d
+ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½{ï¿½êŠ¿ï¿½ï¿½
+ï¿½ï¿½ï¿½oï¿½pï¿½ï¿½ï¿½{
+ï¿½Qï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½C
+ï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½C
 ])
 
 AT_CLEANUP

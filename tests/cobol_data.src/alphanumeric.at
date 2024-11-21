@@ -17,10 +17,10 @@ AT_DATA([prog.cbl], [
          03 FILLER  PIC X(10) VALUE "abc_______".
          03 FILLER  PIC X(10) VALUE "??????????".
          03 FILLER  PIC X(10) VALUE "{}^|!%#$()".
-         03 FILLER  PIC X(10) VALUE "‚ ‚¢‚¤‚¦‚¨".
-         03 FILLER  PIC X(10) VALUE "“ú–{Œêaaaa".
-         03 FILLER  PIC X(10) VALUE "‚P‚Q‚R‚S‚T".
-         03 FILLER  PIC X(10) VALUE "ƒvƒƒOƒ‰ƒ€".
+         03 FILLER  PIC X(10) VALUE "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".
+         03 FILLER  PIC X(10) VALUE "ï¿½ï¿½ï¿½{ï¿½ï¿½aaaa".
+         03 FILLER  PIC X(10) VALUE "ï¿½Pï¿½Qï¿½Rï¿½Sï¿½T".
+         03 FILLER  PIC X(10) VALUE "ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½".
 
        01  TEST-DATA-R   REDEFINES TEST-DATA.
          03  TEST-TBL    OCCURS  10.
@@ -117,7 +117,7 @@ AT_DATA([prog.cbl], [
 ])
 
 AT_CHECK([${EMBED_DB_INFO} prog.cbl])
-AT_CHECK([ocesql prog.cbl prog.cob], [0],
+AT_CHECK([${OCESQL4J} prog.cbl prog.cob], [0],
 [precompile start: prog.cbl
 =======================================================
               LIST OF CALLED DB Library API            @&t@
@@ -140,10 +140,10 @@ abcdefghij
 abc_______
 ??????????
 {}^|!%#$()
-‚ ‚¢‚¤‚¦‚¨
-“ú–{Œêaaaa
-‚P‚Q‚R‚S‚T
-ƒvƒƒOƒ‰ƒ€
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½{ï¿½ï¿½aaaa
+ï¿½Pï¿½Qï¿½Rï¿½Sï¿½T
+ï¿½vï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½
 ])
 
 AT_CLEANUP
