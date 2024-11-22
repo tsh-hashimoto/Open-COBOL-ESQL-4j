@@ -71,7 +71,7 @@ jobs:
 
     - name: Build ocesql.exe
       run: |
-        msbuild /p:Configuration=Release /p:AdditionalIncludePaths=./:ocesql win/ocesql4j.sln
+        msbuild /p:Configuration=Release /p:AdditionalIncludePaths=./:ocesql4j win/ocesql4j.sln
  
     - name: Place files of OCESQL 4j
       working-directory: win
