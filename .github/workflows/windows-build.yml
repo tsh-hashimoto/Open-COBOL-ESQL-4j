@@ -83,8 +83,8 @@ jobs:
         $env:PATH+=";C:\opensourcecobol4j\bin;C:\ocesql4j\bin;C:\ocesql4j\config"
         $env:CLASSPATH=".;C:\opensourcecobol4j\lib\libcobj.jar;C:\ocesql4j\lib\ocesql4j.jar;C:\ocesql4j\lib\postgresql.jar"
         copy ../copy/sqlca.cbl .
-        ocesql FETCHTBL.cbl  FETCHTBL.cob
-        ocesql INSERTTBL.cbl INSERTTBL.cob
+        ocesql4j FETCHTBL.cbl  FETCHTBL.cob
+        ocesql4j INSERTTBL.cbl INSERTTBL.cob
         cobj INSERTTBL.cob
         cobj FETCHTBL.cob
         java INSERTTBL
