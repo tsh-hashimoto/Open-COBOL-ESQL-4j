@@ -108,12 +108,12 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\ocesql\errorfile.c" />
-    <ClCompile Include="..\..\ocesql\ocesql.c" />
-    <ClCompile Include="..\..\ocesql\ocesqlutil.c" />
-    <ClCompile Include="..\..\ocesql\parser.c" />
-    <ClCompile Include="..\..\ocesql\ppout.c" />
-    <ClCompile Include="..\..\ocesql\scanner.c" />
+    <ClCompile Include="..\..\ocesql4j\errorfile.c" />
+    <ClCompile Include="..\..\ocesql4j\ocesql.c" />
+    <ClCompile Include="..\..\ocesql4j\ocesqlutil.c" />
+    <ClCompile Include="..\..\ocesql4j\parser.c" />
+    <ClCompile Include="..\..\ocesql4j\ppout.c" />
+    <ClCompile Include="..\..\ocesql4j\scanner.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
