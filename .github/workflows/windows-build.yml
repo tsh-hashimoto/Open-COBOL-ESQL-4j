@@ -101,8 +101,8 @@ jobs:
       if: ${{ inputs.upload-artifacts }}
       uses: actions/upload-artifact@v4
       with:
-        name: ocesql.exe
-        path: win\x64\Release\ocesql.exe
+        name: ocesql4j.exe
+        path: win\x64\Release\ocesql4j.exe
 
     - name: Upload ocesql4j.jar
       if: ${{ inputs.upload-artifacts }}
